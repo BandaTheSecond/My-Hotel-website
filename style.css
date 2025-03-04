@@ -1,0 +1,95 @@
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    background-color: lightskyblue;
+    
+}
+
+h1{
+    padding: 0;
+    margin: 20;
+    font-size: 4em;
+    color:rgb(39, 8, 112);
+    text-align: center;
+    font-style: italic;
+}
+
+header{
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    text-decoration:none;
+}
+.website{
+    font-size: 15px;
+
+    
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(44, 37, 37);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    justify-content:space-evenly;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    color: red;
+}
+.navbar li{
+    float:left;
+
+}
+img {
+    max-width: auto; 
+    height: auto; 
+    display: flex;
+    margin:auto;
+    padding: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+ 
+}
+.website{
+    text-align: center;
+   
+}
+
+
+footer{
+    padding: o;
+    margin: 0;
+    font-size: 1em;
+    background-color:rgb(14, 10, 10);
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin-top: 0%;
+        padding: 80px 10%;
+        color: #fff;
+    }
+    h3{
+        font-size: 18px;
+        color: rgba(255, 0, 43, 0.5);
+        margin-bottom: 15px;
+
+    }
+    .List ul li a:hover{
+        color:red;
+    }
+    .Bottom-bar{
+        text-align: center;
+        border: 3px solid #fff;
+        color: #fff;
+    }
+    
