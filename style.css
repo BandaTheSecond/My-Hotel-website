@@ -7,9 +7,9 @@ body{
 
 h1{
     padding: 0;
-    margin: 20;
-    font-size: 4em;
-    color:rgb(39, 8, 112);
+    margin: 0;
+    font-size: 3em;
+    color:black;
     text-align: center;
     font-style: italic;
 }
@@ -80,7 +80,7 @@ footer{
     }
     h3{
         font-size: 18px;
-        color: rgba(255, 0, 43, 0.5);
+        color: red;
         margin-bottom: 15px;
 
     }

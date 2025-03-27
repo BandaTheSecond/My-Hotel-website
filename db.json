@@ -1,0 +1,144 @@
+{
+    "rooms": [
+      {
+        "id": 1,
+        "type": "Standard",
+        "price": 7500,
+        "availability": true,
+        "beds": 1,
+        "capacity": 2,
+        "description": "A cozy standard room with modern amenities.",
+        "amenities": ["Free Wi-Fi", "TV", "Air Conditioning", "Mini-Fridge"],
+        "image": "https://example.com/standard-room.jpg"
+      },
+      {
+        "id": 2,
+        "type": "Deluxe",
+        "price": 10000,
+        "availability": true,
+        "beds": 1,
+        "capacity": 3,
+        "description": "Spacious deluxe room with city views.",
+        "amenities": ["Free Wi-Fi", "TV", "Air Conditioning", "Mini-Fridge", "Balcony"],
+        "image": "https://example.com/deluxe-room.jpg"
+      },
+      {
+        "id": 3,
+        "type": "Suite",
+        "price": 15000,
+        "availability": true,
+        "beds": 2,
+        "capacity": 4,
+        "description": "Luxury suite with a private lounge and ocean views.",
+        "amenities": ["Free Wi-Fi", "Smart TV", "Air Conditioning", "Jacuzzi", "Mini-Bar"],
+        "image": "https://example.com/suite-room.jpg"
+      },
+      {
+        "id": 4,
+        "type": "Presidential Suite",
+        "price": 25000,
+        "availability": false,
+        "beds": 2,
+        "capacity": 5,
+        "description": "An exclusive suite with private butler service.",
+        "amenities": ["Free Wi-Fi", "Smart TV", "Jacuzzi", "Private Pool", "Personal Chef"],
+        "image": "https://example.com/presidential-suite.jpg"
+      }
+    ]
+  }
+  
+  {
+    "menu": [
+      {
+        "id": 1,
+        "category": "Breakfast",
+        "name": "Pancakes with Maple Syrup",
+        "description": "Fluffy pancakes served with maple syrup and fresh berries.",
+        "price": 800,
+        "availability": true,
+        "image": "https://example.com/pancakes.jpg"
+      },
+      {
+        "id": 2,
+        "category": "Breakfast",
+        "name": "Full English Breakfast",
+        "description": "Eggs, bacon, sausage, beans, grilled tomato, and toast.",
+        "price": 1200,
+        "availability": true,
+        "image": "https://example.com/full-english.jpg"
+      },
+      {
+        "id": 3,
+        "category": "Lunch",
+        "name": "Grilled Chicken with Mashed Potatoes",
+        "description": "Succulent grilled chicken served with creamy mashed potatoes.",
+        "price": 1500,
+        "availability": true,
+        "image": "https://example.com/grilled-chicken.jpg"
+      },
+      {
+        "id": 4,
+        "category": "Lunch",
+        "name": "Spaghetti Bolognese",
+        "description": "Classic Italian spaghetti with a rich meat sauce.",
+        "price": 1400,
+        "availability": true,
+        "image": "https://example.com/spaghetti.jpg"
+      },
+      {
+        "id": 5,
+        "category": "Dinner",
+        "name": "T-Bone Steak with Garlic Butter",
+        "description": "Grilled T-bone steak topped with garlic butter, served with fries.",
+        "price": 2500,
+        "availability": true,
+        "image": "https://example.com/tbone-steak.jpg"
+      },
+      {
+        "id": 6,
+        "category": "Dinner",
+        "name": "Grilled Salmon with Lemon Butter",
+        "description": "Perfectly grilled salmon served with a lemon butter sauce.",
+        "price": 2300,
+        "availability": true,
+        "image": "https://example.com/grilled-salmon.jpg"
+      },
+      {
+        "id": 7,
+        "category": "Dessert",
+        "name": "Chocolate Lava Cake",
+        "description": "Warm chocolate cake with a gooey molten center.",
+        "price": 900,
+        "availability": true,
+        "image": "https://example.com/chocolate-lava.jpg"
+      },
+      {
+        "id": 8,
+        "category": "Dessert",
+        "name": "Cheesecake",
+        "description": "Rich and creamy cheesecake with a graham cracker crust.",
+        "price": 950,
+        "availability": true,
+        "image": "https://example.com/cheesecake.jpg"
+      },
+      {
+        "id": 9,
+        "category": "Beverages",
+        "name": "Fresh Mango Juice",
+        "description": "Cold and refreshing mango juice.",
+        "price": 500,
+        "availability": true,
+        "image": "https://example.com/mango-juice.jpg"
+      },
+      {
+        "id": 10,
+        "category": "Beverages",
+        "name": "Cappuccino",
+        "description": "Classic Italian coffee with steamed milk and frothy foam.",
+        "price": 600,
+        "availability": true,
+        "image": "https://example.com/cappuccino.jpg"
+      }
+    ]
+  }
+  
