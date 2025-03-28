@@ -33,7 +33,8 @@ function displayRooms(rooms) {
     rooms.forEach(room => {
         const div = document.createElement("div");
         div.classList.add("card");
-        div.innerHTML = `<h3>${room.type}</h3><p>Price: Ksh.${room.price}/night</p>`;
+        div.innerHTML = `<h3>${room.type}</h3>
+        <p>Price: Ksh.${room.price}/night</p>`;
         roomsContainer.appendChild(div);
     });
 }
@@ -55,7 +56,8 @@ async function loadRoomsIntoSelect() {
     }
 }
 
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
     event.preventDefault();
     
     const name = document.getElementById("name").value;
@@ -64,9 +66,34 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     const checkIn = document.getElementById("checkIn").value;
     const checkOut = document.getElementById("checkOut").value;
 
-    const confirmationMessage = `
-        <p>Thank you, <b>${name}</b>!</p>
-        <p>Your booking for a <b>${roomType}</b> from <b>${checkIn}</b> to <b>${checkOut}</b> has been confirmed.</p>
-    `;
-    document.getElementById("confirmationMessage").innerHTML = confirmationMessage;
+    const bookingData = {
+        name,
+        email,
+        roomType,
+        checkIn,
+        checkOut
+    };
+
+    // saving to db.json
+    fetch("http://localhost:3000/bookings", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(bookingData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const confirmationMessage = `
+            <p>Thank you, <b>${name}</b>!</p>
+            <p>Your booking for a <b>${roomType}</b> from <b>${checkIn}</b> to <b>${checkOut}</b> has been confirmed.</p>
+        `;
+        document.getElementById("confirmationMessage").innerHTML = confirmationMessage;
+        
+        
+    })
+    .catch(error => {
+        console.error("Error saving booking:", error);
+        document.getElementById("confirmationMessage").innerHTML = "<p style='color: red;'>An error occurred. Please try again.</p>";
+    });
 });

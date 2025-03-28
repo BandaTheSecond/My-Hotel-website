@@ -1,13 +1,76 @@
 {
   "menu": [
-    { "id": 1, "name": "Grilled Chicken", "price": 1200 , "image":"images/grilled-chicken.jpeg"},
-    { "id": 2, "name": "Seafood Platter", "price": 2500,  "images":"images/Seafood Platter.jpeg"},
-    { "id": 3, "name": "Vegetable Stir-fry", "price": 900 , "image":"images/Vegetable Stir-fry.jpeg"}
+    {
+      "id": "1",
+      "name": "Grilled Chicken",
+      "price": 1200,
+      "image": "images/grilled-chicken.jpeg"
+    },
+    {
+      "id": "2",
+      "name": "Seafood Platter",
+      "price": 2500,
+      "image": "images/Seafood Platter.jpeg"
+    },
+    {
+      "id": "3",
+      "name": "Vegetable Stir-fry",
+      "price": 900,
+      "image": "images/Vegetable Stir-fry.jpeg"
+    }
   ],
   "rooms": [
-    { "id": 1,
-     "type": "Standard", "price": 7500, "image":"images/premier.png" },
-    { "id": 2, "type": "Deluxe", "price": 10000, "image":"images/delux.png"},
-    { "id": 3, "type": "Suite", "price": 15000, "image":"images/luxury.png"}
+    {
+      "id": "1",
+      "type": "Standard",
+      "price": 7500,
+      "image": "images/premier.png"
+    },
+    {
+      "id": "2",
+      "type": "Deluxe",
+      "price": 10000,
+      "image": "images/delux.png"
+    },
+    {
+      "id": "3",
+      "type": "Suite",
+      "price": 15000,
+      "image": "images/luxury.png"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "7dc9",
+      "name": "Amos Banda",
+      "email": "bandaamos43@gmail.com",
+      "roomType": "Standard",
+      "checkIn": "2025-03-29",
+      "checkOut": "2025-03-30"
+    },
+    {
+      "id": "825c",
+      "name": "Kamuzu",
+      "email": "kamuzu@gmail.com",
+      "roomType": "Suite",
+      "checkIn": "2025-03-28",
+      "checkOut": "2025-03-29"
+    },
+    {
+      "id": "96ff",
+      "name": "Amos Banda",
+      "email": "bandaamos43@gmail.com",
+      "roomType": "Standard",
+      "checkIn": "2025-03-29",
+      "checkOut": "2025-03-31"
+    },
+    {
+      "id": "338c",
+      "name": "O.J",
+      "email": "Onib@gmail.com",
+      "roomType": "Suite",
+      "checkIn": "2025-03-30",
+      "checkOut": "2025-03-31"
+    }
   ]
 }
