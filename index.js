@@ -22,7 +22,6 @@ function displayMenu(menu) {
         div.classList.add("card");
         div.innerHTML = `
         <h3>${item.name}</h3>
-        
         <p>Price: Ksh.${item.price}</p>`;
         menuContainer.appendChild(div);
     });
