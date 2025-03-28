@@ -4,16 +4,22 @@ body {
     padding: 0;
     background-color: #789de0;
 }
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
+   header{ background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/5a/66/75/lake-naivasha-resort.jpg?w=900&h=-1&s=1");
+    background-size: cover; /* Ensures the image covers the header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-}
+    color: black; /* Ensures text is readable */
+    padding: 20px;}
+
+
 nav ul{
     list-style-type: none;
-    background-color: rgb(44, 37, 37);
+    background-color: black;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -25,7 +31,7 @@ nav ul{
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
