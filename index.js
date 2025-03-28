@@ -20,7 +20,10 @@ function displayMenu(menu) {
     menu.forEach(item => {
         const div = document.createElement("div");
         div.classList.add("card");
-        div.innerHTML = `<h3>${item.name}</h3><p>Price: Ksh.${item.price}</p>`;
+        div.innerHTML = `
+        <h3>${item.name}</h3>
+        
+        <p>Price: Ksh.${item.price}</p>`;
         menuContainer.appendChild(div);
     });
 }

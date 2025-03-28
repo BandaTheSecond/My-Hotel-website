@@ -1,13 +1,13 @@
 {
   "menu": [
-    { "id": 1, 
-    "name": "Grilled Chicken", "price": 1200 },
-    { "id": 2, "name": "Seafood Platter", "price": 2500 },
-    { "id": 3, "name": "Vegetable Stir-fry", "price": 900 }
+    { "id": 1, "name": "Grilled Chicken", "price": 1200 , "image":"images/grilled-chicken.jpeg"},
+    { "id": 2, "name": "Seafood Platter", "price": 2500,  "images":"images/Seafood Platter.jpeg"},
+    { "id": 3, "name": "Vegetable Stir-fry", "price": 900 , "image":"images/Vegetable Stir-fry.jpeg"}
   ],
   "rooms": [
-    { "id": 1, "type": "Standard", "price": 7500 },
-    { "id": 2, "type": "Deluxe", "price": 10000 },
-    { "id": 3, "type": "Suite", "price": 15000 }
+    { "id": 1,
+     "type": "Standard", "price": 7500, "image":"images/premier.png" },
+    { "id": 2, "type": "Deluxe", "price": 10000, "image":"images/delux.png"},
+    { "id": 3, "type": "Suite", "price": 15000, "image":"images/luxury.png"}
   ]
 }
