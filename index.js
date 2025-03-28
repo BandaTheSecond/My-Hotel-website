@@ -1,94 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("db.json")
-        .then(response => response.json())
-        .then(data => {
-            displayRooms(data.rooms);
-            displayMenu(data.menu);
-            displayEvents(data.events);
-        })
-        .catch(error => console.error("Error loading data:", error));
+    fetchData();
+    loadRoomsIntoSelect();
 });
 
-// Display Rooms
-function displayRooms(rooms) {
-    const roomDropdown = document.getElementById("roomType");
-    roomDropdown.innerHTML = "";
-
-    rooms.forEach(room => {
-        if (room.availability) {
-            let option = document.createElement("option");
-            option.value = room.type;
-            option.innerText = `${room.type} - Ksh.${room.price}/night`;
-            roomDropdown.appendChild(option);
-        }
-    });
+async function fetchData() {
+    try {
+        const response = await fetch("db.json");
+        const data = await response.json();
+        
+        displayMenu(data.menu);
+        displayRooms(data.rooms);
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
 }
 
-// Display Food Menu
 function displayMenu(menu) {
-    const menuSection = document.getElementById("menu");
-    let menuHTML = "<h2>Food Menu</h2>";
-
+    const menuContainer = document.querySelector(".menu-container");
     menu.forEach(item => {
-        if (item.availability) {
-            menuHTML += `
-                <div>
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <p>Price: Ksh.${item.price}</p>
-                </div>
-            `;
-        }
+        const div = document.createElement("div");
+        div.classList.add("card");
+        div.innerHTML = `<h3>${item.name}</h3><p>Price: Ksh.${item.price}</p>`;
+        menuContainer.appendChild(div);
     });
-
-    menuSection.innerHTML = menuHTML;
 }
 
-// Display Events
-function displayEvents(events) {
-    const eventSection = document.getElementById("events");
-    let eventHTML = "<h2>Upcoming Events</h2>";
-
-    events.forEach(event => {
-        eventHTML += `
-            <div>
-                <h3>${event.name}</h3>
-                <p>${event.description}</p>
-                <p>Date: ${event.date} at ${event.time}</p>
-                <p>Location: ${event.location}</p>
-                <p>Price: Ksh.${event.price}</p>
-                <p>Slots Available: ${event.slots}</p>
-            </div>
-        `;
+function displayRooms(rooms) {
+    const roomsContainer = document.querySelector(".rooms-container");
+    rooms.forEach(room => {
+        const div = document.createElement("div");
+        div.classList.add("card");
+        div.innerHTML = `<h3>${room.type}</h3><p>Price: Ksh.${room.price}/night</p>`;
+        roomsContainer.appendChild(div);
     });
-
-    eventSection.innerHTML = eventHTML;
 }
 
-function bookRoom() {
+async function loadRoomsIntoSelect() {
+    try {
+        const response = await fetch("db.json");
+        const data = await response.json();
+        
+        const roomSelect = document.getElementById("roomType");
+        data.rooms.forEach(room => {
+            const option = document.createElement("option");
+            option.value = room.type;
+            option.textContent = `${room.type} - Ksh.${room.price}/night`;
+            roomSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error("Error loading rooms:", error);
+    }
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const roomType = document.getElementById("roomType").value;
     const checkIn = document.getElementById("checkIn").value;
     const checkOut = document.getElementById("checkOut").value;
-    const confirmationMessage = document.getElementById("confirmationMessage");
 
-    // Validate input fields
-    if (!name || !email || !roomType || !checkIn || !checkOut) {
-        alert("❌ Please fill in all fields.");
-        return;
-    }
-
-    // Show confirmation message
-    confirmationMessage.innerHTML = `
-        <p style="color: green; font-weight: bold;">
-            ✅ Booking Confirmed for <b>${name}</b>!<br>
-            Room: <b>${roomType}</b><br>
-            Check-in: <b>${checkIn}</b><br>
-            Check-out: <b>${checkOut}</b>
-        </p>
+    const confirmationMessage = `
+        <p>Thank you, <b>${name}</b>!</p>
+        <p>Your booking for a <b>${roomType}</b> from <b>${checkIn}</b> to <b>${checkOut}</b> has been confirmed.</p>
     `;
-
-    // Optionally clear the form after booking
-    document.getElementById("bookingForm").reset();
-}
+    document.getElementById("confirmationMessage").innerHTML = confirmationMessage;
+});

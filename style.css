@@ -1,31 +1,17 @@
-body{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0px;
-    background-color: lightskyblue;
-    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #789de0;
 }
 
-h1{
-    padding: 0;
-    margin: 0;
-    font-size: 3em;
-    color:black;
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
     text-align: center;
-    font-style: italic;
 }
-
-header{
-    padding: 0;
-    margin: 0;
-    font-size: 2em;
-    text-decoration:none;
-}
-.website{
-    font-size: 15px;
-
-    
-}
-.navbar ul{
+nav ul{
     list-style-type: none;
     background-color: rgb(44, 37, 37);
     padding: 0px;
@@ -35,54 +21,65 @@ header{
     justify-content: center;
     justify-content:space-evenly;
 }
-.navbar a{
-    color: #fff;
+
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(235, 17, 17);
     text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
 }
-.navbar a:hover{
-    color: red;
-}
-.navbar li{
-    float:left;
 
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
 }
-img {
-    max-width: auto; 
-    height: auto; 
+
+.menu-container, .rooms-container {
     display: flex;
-    margin:auto;
-    padding: 0;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
- 
+    gap: 20px;
+    flex-wrap: wrap;
+    ;
 }
-.website{
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    background:#789de0;
     text-align: center;
-   
 }
 
+button {
+    background: #4b0909;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
 
+button:hover {
+    background: #555;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 0%;
+    padding: 80px 10%;
+    color: #fff;
+}
 footer{
     padding: o;
     margin: 0;
     font-size: 1em;
     background-color:rgb(14, 10, 10);
-    }
-    .container{
-        display: flex;
-        justify-content: center;
-        justify-content: space-between;
-        margin-top: 0%;
-        padding: 80px 10%;
-        color: #fff;
-    }
-    h3{
-        font-size: 18px;
-        color: red;
-        margin-bottom: 15px;
-
     }
     .List ul li a:hover{
         color:red;
@@ -90,6 +87,6 @@ footer{
     .Bottom-bar{
         text-align: center;
         border: 3px solid #fff;
-        color: #fff;
+        color: white;
     }
-    
+   
